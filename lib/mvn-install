@@ -1,0 +1,1 @@
+mvn install:install-file -DgroupId=com.google.code.kaptcha -DartifactId=kaptcha -Dversion=2.3.2 -Dfile=E:\cas-4.0.0\cas-server-webapp\lib\kaptcha-2.3.2.jar -Dpackaging=jar -DgeneratePom=true
