@@ -106,18 +106,20 @@
 
     <!-- 添加校验 -->
     <action-state id="validate">
-        <evaluate expression="authenticationViaFormAction.validate(flowRequestContext, flowScope.credential, messageContext)"/>
+        <evaluate
+                expression="authenticationViaFormAction.validate(flowRequestContext, flowScope.credential, messageContext)"/>
         <transition on="error" to="generateLoginTicket"/>
         <transition on="success" to="realSubmit"/>
     </action-state>
 
     <action-state id="realSubmit">
-        <evaluate expression="authenticationViaFormAction.submit(flowRequestContext, flowScope.credential, messageContext)"/>
+        <evaluate
+                expression="authenticationViaFormAction.submit(flowRequestContext, flowScope.credential, messageContext)"/>
         <transition on="warn" to="warn"/>
-        <transition on="success" to="sendTicketGrantingTicket" />
+        <transition on="success" to="sendTicketGrantingTicket"/>
         <transition on="successWithWarnings" to="showMessages"/>
         <transition on="authenticationFailure" to="handleAuthenticationFailure"/>
-        <transition on="error" to="generateLoginTicket" />
+        <transition on="error" to="generateLoginTicket"/>
     </action-state>
 
     <view-state id="showMessages" view="casLoginMessageView">
@@ -129,7 +131,8 @@
     </view-state>
 
     <action-state id="handleAuthenticationFailure">
-        <evaluate expression="authenticationExceptionHandler.handle(flowRequestContext,currentEvent.attributes.error, messageContext)"/>
+        <evaluate
+                expression="authenticationExceptionHandler.handle(flowRequestContext,currentEvent.attributes.error, messageContext)"/>
         <transition on="AccountDisabledException" to="casAccountDisabledView"/>
         <transition on="AccountLockedException" to="casAccountLockedView"/>
         <transition on="CredentialExpiredException" to="casExpiredPassView"/>

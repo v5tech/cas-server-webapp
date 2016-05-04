@@ -1,0 +1,246 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*页面重置*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    font-family: "Hiragino Sans GB", "Microsoft Yahei", SimSun, Arial, "Helvetica Neue", Helvetica;
+    color: #4d4d4d;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    border: none;
+    outline: none;
+}
+
+button {
+    border: none;
+}
+
+input {
+    border: none;
+}
+
+/*页面重置*/
+
+.header_btns .login {
+    background-color: #f7a627;
+    border: 1px solid #f7a627;
+}
+
+.header_btns .login:hover {
+    background-color: #ffab28;
+    border: 1px solid #ffab28;
+}
+
+.logo_text {
+    float: left;
+    margin-top: 32px;
+    margin-left: 20px;
+}
+
+.index_login {
+    width: 100%;
+    height: 710px;
+    min-width: 490px;
+    overflow: hidden;
+    position: relative;
+    min-height: 560px;
+    background: url(../images/login_bg.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.index_login .outer_box {
+    width: 450px;
+    max-height: 600px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    margin-top: -320px;
+    left: 50%;
+    margin-left: -225px;
+}
+
+.index_login .big_logo {
+    width: 156px;
+    height: 156px;
+    background: url(../images/logo_big.png) no-repeat center;
+    margin: 0 auto;
+}
+
+.index_login h1 {
+    width: 440px;
+    height: 80px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.login_box {
+    width: 400px;
+    height: 338px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.login_box .w261 {
+    width: 310px;
+    height: 237px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.user {
+    width: 300px;
+    height: 41px;
+    border: 1px solid #a6a6a6;
+    margin-bottom: 20px;
+    -moz-border-radius: 30px; /* Gecko browsers */
+    -webkit-border-radius: 30px; /* Webkit browsers */
+    border-radius: 30px; /* W3C syntax */
+}
+
+.user .input_box {
+    width: 250px;
+    height: 36px;
+    line-height: 36px;
+    margin-left: 15px;
+    margin-top: 2px;
+    background-image: url(../images/user.png);
+    background-repeat: no-repeat;
+    background-position: left 12px;
+    padding-left: 25px;
+}
+
+.user .password {
+    background-position: left -15px;
+}
+
+.user input {
+    background-color: white;
+    background-color: transparent !important;
+}
+
+.re_password {
+    overflow: hidden;
+    margin: 10px auto;
+}
+
+.re_password p {
+    line-height: 30px;
+    float: right;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.re_password p a {
+    color: #3ab1ee;
+    text-decoration: underline;
+}
+
+.re_password .remember {
+    float: left;
+    overflow: hidden;
+    line-height: 30px;
+    width: 150px;
+}
+
+.re_password .remember span {
+    font-size: 14px;
+    font-weight: normal;
+    float: left;
+    color: #666;
+}
+
+.re_password .remember .rem_btn {
+    float: left;
+    height: 30px;
+    width: 50px;
+    overflow: hidden;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.verify {
+    overflow: hidden;
+    margin: 10px 0 20px 0;
+}
+
+.verify_box {
+    width: 190px;
+    height: 41px;
+    border: 1px solid #a6a6a6;
+    float: left;
+    -moz-border-radius: 30px; /* Gecko browsers */
+    -webkit-border-radius: 30px; /* Webkit browsers */
+    border-radius: 30px; /* W3C syntax */
+}
+
+.verify .input_box {
+    width: 170px;
+    height: 36px;
+    line-height: 36px;
+    margin-left: 15px;
+    margin-top: 2px;
+    padding-left: 5px;
+    background-color: transparent;
+}
+
+.verify .ver_img {
+    width: 90px;
+    height: 30px;
+    overflow: hidden;
+    float: right;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.verify img {
+    width: 100%;
+    height: 100%;
+}
+
+.alert_tip {
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #e95318;
+}
+
+.w261 .button {
+    display: block;
+    font-size: 16px;
+    height: 41px;
+    line-height: 43px;
+    text-align: center;
+    width: 300px;
+    background-color: #37a3e3;
+    color: white;
+    border: 1px solid #37a3e3;
+    -moz-border-radius: 30px; /* Gecko browsers */
+    -webkit-border-radius: 30px; /* Webkit browsers */
+    border-radius: 30px; /* W3C syntax */
+}
+
+.w261 .button:hover {
+    background-color: #3eb7ff;
+    border: 1px solid #3eb7ff;
+}

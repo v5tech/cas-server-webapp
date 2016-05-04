@@ -181,12 +181,12 @@
     <!--<bean id="attributeRepository" class="org.jasig.services.persondir.support.MultipleAttributeUserDao"/>-->
 
     <bean id="attributeRepository" class="org.jasig.services.persondir.support.StubPersonAttributeDao"
-            p:backingMap-ref="attrRepoBackingMap" />
-    
+          p:backingMap-ref="attrRepoBackingMap"/>
+
     <util:map id="attrRepoBackingMap">
-        <entry key="uid" value="uid" />
-        <entry key="eduPersonAffiliation" value="eduPersonAffiliation" /> 
-        <entry key="groupMembership" value="groupMembership" />
+        <entry key="uid" value="uid"/>
+        <entry key="eduPersonAffiliation" value="eduPersonAffiliation"/>
+        <entry key="groupMembership" value="groupMembership"/>
     </util:map>
 
     <!-- 

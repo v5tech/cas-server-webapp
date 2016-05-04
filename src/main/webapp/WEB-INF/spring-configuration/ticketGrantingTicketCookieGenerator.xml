@@ -23,15 +23,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<description>
-		Defines the cookie that stores the TicketGrantingTicket.  You most likely should never modify these (especially the "secure" property).
-		You can change the name if you want to make it harder for people to guess.
-	</description>
-	<!-- p:cookieSecure="true" 表示开启https协议,cookieSecure设置为false关闭https协议 -->
-	<bean id="ticketGrantingTicketCookieGenerator" class="org.jasig.cas.web.support.CookieRetrievingCookieGenerator"
-		p:cookieSecure="false"
-		p:cookieMaxAge="3600"
-		p:cookieName="CASTGC"
-		p:rememberMeMaxAge="3600"
-		p:cookiePath="/cas" />
+    <description>
+        Defines the cookie that stores the TicketGrantingTicket. You most likely should never modify these (especially
+        the "secure" property).
+        You can change the name if you want to make it harder for people to guess.
+    </description>
+    <!-- p:cookieSecure="true" 表示开启https协议,cookieSecure设置为false关闭https协议 -->
+    <bean id="ticketGrantingTicketCookieGenerator" class="org.jasig.cas.web.support.CookieRetrievingCookieGenerator"
+          p:cookieSecure="false"
+          p:cookieMaxAge="3600"
+          p:cookieName="CASTGC"
+          p:rememberMeMaxAge="3600"
+          p:cookiePath="/cas"/>
 </beans>

@@ -21,7 +21,7 @@ public class CaptchaVaditeAuthenticationViaFormAction extends AuthenticationViaF
     private static final String CAPTCHA_ERROR_MSG = "error.captcha";// 验证码不正确
 
     public final String validate(final RequestContext context, final Credential credentials,
-                                         final MessageContext messageContext) throws Exception {
+                                 final MessageContext messageContext) throws Exception {
         final HttpServletRequest request = WebUtils.getHttpServletRequest(context);
         HttpSession session = request.getSession();
 
@@ -38,7 +38,7 @@ public class CaptchaVaditeAuthenticationViaFormAction extends AuthenticationViaF
         String password = request.getParameter("password");
 
         // 用户名非空验证
-        if(StringUtils.isEmpty(username)){
+        if (StringUtils.isEmpty(username)) {
             populateErrorsInstance("required.username", messageContext);
             count++;
             context.getFlowScope().put("count", count);
@@ -46,7 +46,7 @@ public class CaptchaVaditeAuthenticationViaFormAction extends AuthenticationViaF
         }
 
         // 密码非空验证
-        if(StringUtils.isEmpty(password)){
+        if (StringUtils.isEmpty(password)) {
             populateErrorsInstance("required.password", messageContext);
             count++;
             context.getFlowScope().put("count", count);
@@ -57,7 +57,7 @@ public class CaptchaVaditeAuthenticationViaFormAction extends AuthenticationViaF
         String showCaptcha = request.getParameter("showCaptcha");
 
         // 判断验证码是否显示
-        if(StringUtils.hasText(showCaptcha)){
+        if (StringUtils.hasText(showCaptcha)) {
             // 从session中获取验证码
             String authcode = (String) session.getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
             session.removeAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
@@ -74,7 +74,7 @@ public class CaptchaVaditeAuthenticationViaFormAction extends AuthenticationViaF
             // 验证码正确性判断
             if (submitAuthcode.equals(authcode)) {
                 return "success";
-            }else{
+            } else {
                 populateErrorsInstance(CAPTCHA_ERROR_MSG, messageContext);
                 count++;
                 context.getFlowScope().put("count", count);

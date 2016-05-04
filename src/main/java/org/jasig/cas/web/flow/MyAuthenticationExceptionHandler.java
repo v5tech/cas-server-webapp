@@ -18,13 +18,19 @@ import java.util.List;
  */
 public class MyAuthenticationExceptionHandler {
 
-    /** State name when no matching exception is found. */
+    /**
+     * State name when no matching exception is found.
+     */
     private static final String UNKNOWN = "UNKNOWN";
 
-    /** Default message bundle prefix. */
+    /**
+     * Default message bundle prefix.
+     */
     private static final String DEFAULT_MESSAGE_BUNDLE_PREFIX = "authenticationFailure.";
 
-    /** Default list of errors this class knows how to handle. */
+    /**
+     * Default list of errors this class knows how to handle.
+     */
     private static final List<Class<? extends Exception>> DEFAULT_ERROR_LIST =
             new ArrayList<Class<? extends Exception>>();
 
@@ -40,11 +46,15 @@ public class MyAuthenticationExceptionHandler {
         DEFAULT_ERROR_LIST.add(org.jasig.cas.authentication.InvalidLoginTimeException.class);
     }
 
-    /** Ordered list of error classes that this class knows how to handle. */
+    /**
+     * Ordered list of error classes that this class knows how to handle.
+     */
     @NotNull
     private List<Class<? extends Exception>> errors = DEFAULT_ERROR_LIST;
 
-    /** String appended to exception class name to create a message bundle key for that particular error. */
+    /**
+     * String appended to exception class name to create a message bundle key for that particular error.
+     */
     private String messageBundlePrefix = DEFAULT_MESSAGE_BUNDLE_PREFIX;
 
     /**
@@ -78,7 +88,6 @@ public class MyAuthenticationExceptionHandler {
      * configured. If not match is found, {@value #UNKNOWN} is returned.
      *
      * @param e Authentication error to handle.
-     *
      * @return Name of next flow state to transition to or {@value #UNKNOWN}
      */
     public String handle(final RequestContext context, final AuthenticationException e, final MessageContext messageContext) {
