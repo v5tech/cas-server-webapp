@@ -115,6 +115,23 @@
        | * org.jasig.cas.support.spnego.authentication.handler.support.JCIFSSpnegoAuthenticationHandler
        -->
 
+    <!--
+    <bean id="simpleAuthenticationHandler"
+          class="org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler"/>
+    -->
+
+    <!-- 简单用户密码认证 -->
+    <!--
+    <bean id="acceptUsersAuthenticationHandler"
+          class="org.jasig.cas.authentication.AcceptUsersAuthenticationHandler">
+        <property name="users">
+            <map>
+                <entry key="casuser" value="Mellon"/>
+            </map>
+        </property>
+    </bean>
+    -->
+
     <!-- 配置数据源 -->
     <!--
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"

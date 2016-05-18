@@ -9,6 +9,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * 使用commons-httpclient调用cas server rest服务
+ * http://apereo.github.io/cas/4.0.x/protocol/REST-Protocol.html
+ *
  * Created by Administrator on 2016/5/11 0011.
  */
 public class Client {
