@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 扩展用户自定义属性
- * Created by Administrator on 2016/4/30 0030.
+ * 本地的bug分支，呀对了？
  */
 public class MultipleAttributeUserDao extends StubPersonAttributeDao {
     @Override
