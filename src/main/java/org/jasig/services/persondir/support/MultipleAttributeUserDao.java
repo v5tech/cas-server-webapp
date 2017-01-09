@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 本地的bug分支，呀对了？
  */
 public class MultipleAttributeUserDao extends StubPersonAttributeDao {
     @Override
